@@ -8,24 +8,34 @@
 #X msg 297 195 1;
 #X obj 239 361 i;
 #X obj 239 394 select 1;
-#X obj 350 124 loadbang;
+#X obj 622 117 loadbang;
 #X msg 187 155 0;
 #X msg 224 155 1;
 #X text 174 128 start / stop;
 #X text 105 251 reset to 0;
-#X obj 350 244 60000;
-#X obj 412 269 /;
-#X floatatom 350 186 5 0 0 0 - - -, f 5;
-#X obj 350 216 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 684 269 /;
+#X floatatom 622 179 5 0 0 0 - - -, f 5;
+#X obj 622 209 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 412 291 i;
-#X floatatom 412 313 5 0 0 0 - - -, f 5;
-#X msg 350 151 120;
-#X obj 239 416 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X text 419 125 Set tempo to 120;
-#X text 61 24 This metro allows for potential non-quantized recording
+#X obj 684 291 i;
+#X floatatom 684 313 5 0 0 0 - - -, f 5;
+#X msg 622 144 120;
+#X text 617 95 Set tempo to 120;
+#X text 61 24 This metro setup allows for potential non-quantized recording
 ;
+#X obj 239 422 i;
+#X obj 286 422 + 1;
+#X obj 513 252 /;
+#X msg 372 189 1;
+#X msg 412 189 2;
+#X msg 452 189 3;
+#X msg 491 189 4;
+#X msg 531 189 6;
+#X msg 571 189 8;
+#X text 374 168 1/4 1/8 1/12 1/16 1/24 1/32;
+#X obj 210 422 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 622 235 60000;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
@@ -35,15 +45,25 @@
 #X connect 5 0 7 0;
 #X connect 6 0 0 1;
 #X connect 7 0 8 0;
-#X connect 8 0 21 0;
-#X connect 9 0 20 0;
+#X connect 8 0 22 0;
+#X connect 8 0 32 0;
+#X connect 9 0 19 0;
 #X connect 10 0 0 0;
 #X connect 11 0 1 0;
-#X connect 14 0 15 0;
-#X connect 15 0 18 0;
-#X connect 16 0 15 1;
-#X connect 16 0 17 0;
-#X connect 17 0 14 0;
-#X connect 18 0 19 0;
-#X connect 19 0 5 1;
-#X connect 20 0 16 0;
+#X connect 14 0 17 0;
+#X connect 15 0 16 0;
+#X connect 15 0 14 1;
+#X connect 16 0 33 0;
+#X connect 17 0 18 0;
+#X connect 18 0 5 1;
+#X connect 19 0 15 0;
+#X connect 22 0 23 0;
+#X connect 23 0 22 1;
+#X connect 24 0 14 0;
+#X connect 25 0 24 1;
+#X connect 26 0 24 1;
+#X connect 27 0 24 1;
+#X connect 28 0 24 1;
+#X connect 29 0 24 1;
+#X connect 30 0 24 1;
+#X connect 33 0 24 0;
