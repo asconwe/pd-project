@@ -1,0 +1,10 @@
+#N canvas 0 50 777 300 10;
+#X obj 98 82 table note_pitch;
+#X obj 225 82 table note_velocity;
+#X obj 521 82 table note_channel;
+#X obj 373 82 table note_duration;
+#X text 101 56 note recording tables;
+#X text 101 166 cc recording tables;
+#X obj 100 189 table cc_number;
+#X obj 333 189 table cc_channel;
+#X obj 220 189 table cc_value;
