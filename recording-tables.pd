@@ -1,4 +1,4 @@
-#N canvas 0 50 777 300 10;
+#N canvas 45 84 777 300 10;
 #X obj 98 82 table note_pitch;
 #X obj 225 82 table note_velocity;
 #X obj 521 82 table note_channel;
