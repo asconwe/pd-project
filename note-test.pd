@@ -1,0 +1,9 @@
+#N canvas 433 411 450 300 10;
+#X obj 111 102 makenote 127 500;
+#X obj 119 170 noteout 1;
+#X msg 111 60 48;
+#X obj 108 30 inlet;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
