@@ -10,7 +10,7 @@
 #X obj 373 95 + 1;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array poly 8 float 3;
-#A 0 0 0 0 1 1 0 0 0;
+#A 0 0 1 0 2 1 0 1 0;
 #X coords 0 7 8 0 200 140 1 0 0;
 #X restore 495 340 graph;
 #X obj 227 347 tabread poly;
@@ -50,7 +50,8 @@
 #X obj 331 184 f;
 #X obj 373 184 + 1;
 #X text 480 100 resolution control;
-#X text 396 589 To do: set metro to smallest bpm unit;
+#X text 396 588 To do: set metro to smallest bpm unit add record button/filter
+;
 #X connect 0 0 38 0;
 #X connect 1 0 38 1;
 #X connect 2 0 3 0;

@@ -1,4 +1,4 @@
-#N canvas 695 63 710 506 10;
+#N canvas 767 7 710 506 10;
 #X obj 121 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 188 51 5 0 0 0 - - -, f 5;
@@ -8,9 +8,9 @@
 #X obj 121 95 f;
 #X obj 163 95 + 1;
 #X obj 121 25 inlet;
-#X obj 280 194 inlet;
-#X floatatom 280 216 5 0 0 0 - - -, f 5;
-#X text 320 193 sequence length control;
+#X obj 260 215 inlet;
+#X floatatom 260 237 5 0 0 0 - - -, f 5;
+#X text 300 214 sequence length control;
 #X obj 188 25 inlet;
 #X obj 230 100 inlet;
 #X obj 121 139 sel 0;
@@ -22,19 +22,30 @@
 #X obj 121 184 f;
 #X obj 163 184 + 1;
 #X text 270 100 resolution control;
-#X obj 82 310 line 0 7;
-#X obj 121 278 t b i;
-#X obj 132 345 +;
-#X obj 132 378 coll sequencer;
+#X obj 149 348 +;
+#X obj 149 372 coll sequencer;
 #C restore;
-#X obj 129 415 print;
-#X text 315 335 to do: route coll sequencer outputs to make note;
+#X obj 149 397 print;
+#X obj 121 278 t b f, f 7;
+#X obj 87 324 f;
+#X obj 132 324 + 1;
+#X obj 87 324 f;
+#X obj 132 324 + 1;
+#X obj 31 278 print;
+#X obj 33 257 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 87 301 uzi 8;
+#X obj 63 377 print;
+#X msg 132 301 0;
+#X text 310 341 to do: Make it so that \, on lower resolutions \, sequencer
+gathers all notes to play on quantized note. Use same method \, with
+Uzi.;
 #X connect 0 0 15 0;
 #X connect 1 0 15 1;
 #X connect 2 0 3 0;
 #X connect 2 0 14 0;
 #X connect 3 0 2 1;
-#X connect 4 0 23 0;
+#X connect 4 0 25 0;
 #X connect 5 0 6 0;
 #X connect 6 0 5 1;
 #X connect 7 0 0 0;
@@ -51,8 +62,16 @@
 #X connect 18 0 17 1;
 #X connect 19 0 20 0;
 #X connect 20 0 19 1;
-#X connect 22 0 24 0;
-#X connect 23 0 22 0;
-#X connect 23 1 24 1;
-#X connect 24 0 25 0;
-#X connect 25 0 26 0;
+#X connect 22 0 23 0;
+#X connect 22 0 33 0;
+#X connect 23 0 24 0;
+#X connect 25 0 32 0;
+#X connect 25 1 22 1;
+#X connect 25 1 34 0;
+#X connect 26 0 27 0;
+#X connect 26 0 22 0;
+#X connect 27 0 26 1;
+#X connect 28 0 29 0;
+#X connect 29 0 28 1;
+#X connect 32 0 26 0;
+#X connect 34 0 26 1;
